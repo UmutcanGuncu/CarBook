@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Interfaces\" />
+    <None Remove="CQRS\" />
+    <None Remove="CQRS\Commands\" />
+    <None Remove="CQRS\Queries\" />
+    <None Remove="CQRS\Handlers\" />
+    <None Remove="CQRS\Results\" />
+    <None Remove="CQRS\Results\AboutResults\" />
+    <None Remove="CQRS\Queries\AboutQueries\" />
+    <None Remove="CQRS\Handlers\AboutHandlers\" />
+    <None Remove="CQRS\Commands\AboutCommands\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="CQRS\" />
+    <Folder Include="CQRS\Commands\" />
+    <Folder Include="CQRS\Queries\" />
+    <Folder Include="CQRS\Handlers\" />
+    <Folder Include="CQRS\Results\" />
+    <Folder Include="CQRS\Results\AboutResults\" />
+    <Folder Include="CQRS\Queries\AboutQueries\" />
+    <Folder Include="CQRS\Handlers\AboutHandlers\" />
+    <Folder Include="CQRS\Commands\AboutCommands\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />
+  </ItemGroup>
+</Project>
