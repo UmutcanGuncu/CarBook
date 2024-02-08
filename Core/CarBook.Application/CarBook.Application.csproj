@@ -17,6 +17,26 @@
     <None Remove="CQRS\Queries\AboutQueries\" />
     <None Remove="CQRS\Handlers\AboutHandlers\" />
     <None Remove="CQRS\Commands\AboutCommands\" />
+    <None Remove="CQRS\Results\BannerResult\" />
+    <None Remove="CQRS\Handlers\BannerHandlers\" />
+    <None Remove="CQRS\Queries\BannerQueries\" />
+    <None Remove="CQRS\Commands\BannerCommands\" />
+    <None Remove="CQRS\Results\BrandResult\" />
+    <None Remove="CQRS\Queries\BrandQuery\" />
+    <None Remove="CQRS\Commands\BrandCommands\" />
+    <None Remove="CQRS\Handlers\BrandHandlers\" />
+    <None Remove="CQRS\Results\CarResult\" />
+    <None Remove="CQRS\Queries\CarQueries\" />
+    <None Remove="CQRS\Commands\CarCommands\" />
+    <None Remove="CQRS\Handlers\CarHandlers\" />
+    <None Remove="CQRS\Results\CategoryResults\" />
+    <None Remove="CQRS\Queries\CategoryQueries\" />
+    <None Remove="CQRS\Commands\CategoryCommands\" />
+    <None Remove="CQRS\Handlers\CategoryHandlers\" />
+    <None Remove="CQRS\Results\ContactResults\" />
+    <None Remove="CQRS\Queries\ContactQueries\" />
+    <None Remove="CQRS\Commands\ContactCommand\" />
+    <None Remove="CQRS\Handlers\ContactHandlers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -29,6 +49,26 @@
     <Folder Include="CQRS\Queries\AboutQueries\" />
     <Folder Include="CQRS\Handlers\AboutHandlers\" />
     <Folder Include="CQRS\Commands\AboutCommands\" />
+    <Folder Include="CQRS\Results\BannerResult\" />
+    <Folder Include="CQRS\Handlers\BannerHandlers\" />
+    <Folder Include="CQRS\Queries\BannerQueries\" />
+    <Folder Include="CQRS\Commands\BannerCommands\" />
+    <Folder Include="CQRS\Results\BrandResult\" />
+    <Folder Include="CQRS\Queries\BrandQuery\" />
+    <Folder Include="CQRS\Commands\BrandCommands\" />
+    <Folder Include="CQRS\Handlers\BrandHandlers\" />
+    <Folder Include="CQRS\Results\CarResult\" />
+    <Folder Include="CQRS\Queries\CarQueries\" />
+    <Folder Include="CQRS\Commands\CarCommands\" />
+    <Folder Include="CQRS\Handlers\CarHandlers\" />
+    <Folder Include="CQRS\Results\CategoryResults\" />
+    <Folder Include="CQRS\Queries\CategoryQueries\" />
+    <Folder Include="CQRS\Commands\CategoryCommands\" />
+    <Folder Include="CQRS\Handlers\CategoryHandlers\" />
+    <Folder Include="CQRS\Results\ContactResults\" />
+    <Folder Include="CQRS\Queries\ContactQueries\" />
+    <Folder Include="CQRS\Commands\ContactCommand\" />
+    <Folder Include="CQRS\Handlers\ContactHandlers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />

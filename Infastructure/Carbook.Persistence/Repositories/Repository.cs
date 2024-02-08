@@ -23,6 +23,7 @@ namespace Carbook.Persistence.Repositories
         public async Task DeleteAsync(T entity)
         {
             _context.Set<T>().Remove(entity);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<List<T>> GetAllAsync()
