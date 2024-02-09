@@ -37,6 +37,36 @@
     <None Remove="CQRS\Queries\ContactQueries\" />
     <None Remove="CQRS\Commands\ContactCommand\" />
     <None Remove="CQRS\Handlers\ContactHandlers\" />
+    <None Remove="Mediator\" />
+    <None Remove="Mediator\Commands\" />
+    <None Remove="Mediator\Handlers\" />
+    <None Remove="Mediator\Results\" />
+    <None Remove="Mediator\Queries\" />
+    <None Remove="Mediator\Results\FeatureResults\" />
+    <None Remove="Mediator\Queries\FeatureQueries\" />
+    <None Remove="Mediator\Handlers\FeatureHandlers\" />
+    <None Remove="Mediator\Commands\FeatureCommands\" />
+    <None Remove="Services\" />
+    <None Remove="Mediator\Results\FooterAdressResults\" />
+    <None Remove="Mediator\Queries\FooterAdressQueries\" />
+    <None Remove="Mediator\Commands\FooterAdressCommands\" />
+    <None Remove="Mediator\Handlers\FooterAdressHandlers\" />
+    <None Remove="Mediator\Results\LocationResults\" />
+    <None Remove="Mediator\Queries\LocationQueries\" />
+    <None Remove="Mediator\Handlers\LocationHandlers\" />
+    <None Remove="Mediator\Commands\LocationCommands\" />
+    <None Remove="Mediator\Results\PricingResults\" />
+    <None Remove="Mediator\Queries\PricingQueries\" />
+    <None Remove="Mediator\Commands\PricingCommands\" />
+    <None Remove="Mediator\Handlers\PricingHandlers\" />
+    <None Remove="Mediator\Results\ServiceResults\" />
+    <None Remove="Mediator\Queries\ServiceQueries\" />
+    <None Remove="Mediator\Commands\ServiceCommands\" />
+    <None Remove="Mediator\Handlers\ServiceHandlers\" />
+    <None Remove="Mediator\Results\SocialMediaResults\" />
+    <None Remove="Mediator\Queries\SocialMediaQueries\" />
+    <None Remove="Mediator\Handlers\SocialMediaHandlers\" />
+    <None Remove="Mediator\Commands\SocialMediaCommands\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -69,8 +99,43 @@
     <Folder Include="CQRS\Queries\ContactQueries\" />
     <Folder Include="CQRS\Commands\ContactCommand\" />
     <Folder Include="CQRS\Handlers\ContactHandlers\" />
+    <Folder Include="Mediator\" />
+    <Folder Include="Mediator\Commands\" />
+    <Folder Include="Mediator\Handlers\" />
+    <Folder Include="Mediator\Results\" />
+    <Folder Include="Mediator\Queries\" />
+    <Folder Include="Mediator\Results\FeatureResults\" />
+    <Folder Include="Mediator\Queries\FeatureQueries\" />
+    <Folder Include="Mediator\Handlers\FeatureHandlers\" />
+    <Folder Include="Mediator\Commands\FeatureCommands\" />
+    <Folder Include="Services\" />
+    <Folder Include="Mediator\Results\FooterAdressResults\" />
+    <Folder Include="Mediator\Queries\FooterAdressQueries\" />
+    <Folder Include="Mediator\Commands\FooterAdressCommands\" />
+    <Folder Include="Mediator\Handlers\FooterAdressHandlers\" />
+    <Folder Include="Mediator\Results\LocationResults\" />
+    <Folder Include="Mediator\Queries\LocationQueries\" />
+    <Folder Include="Mediator\Handlers\LocationHandlers\" />
+    <Folder Include="Mediator\Commands\LocationCommands\" />
+    <Folder Include="Mediator\Results\PricingResults\" />
+    <Folder Include="Mediator\Queries\PricingQueries\" />
+    <Folder Include="Mediator\Commands\PricingCommands\" />
+    <Folder Include="Mediator\Handlers\PricingHandlers\" />
+    <Folder Include="Mediator\Results\ServiceResults\" />
+    <Folder Include="Mediator\Queries\ServiceQueries\" />
+    <Folder Include="Mediator\Commands\ServiceCommands\" />
+    <Folder Include="Mediator\Handlers\ServiceHandlers\" />
+    <Folder Include="Mediator\Results\SocialMediaResults\" />
+    <Folder Include="Mediator\Queries\SocialMediaQueries\" />
+    <Folder Include="Mediator\Handlers\SocialMediaHandlers\" />
+    <Folder Include="Mediator\Commands\SocialMediaCommands\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
   </ItemGroup>
 </Project>

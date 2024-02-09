@@ -7,15 +7,18 @@ using CarBook.Application.CQRS.Handlers.CarHandlers;
 using CarBook.Application.CQRS.Handlers.CategoryHandlers;
 using CarBook.Application.CQRS.Handlers.ContactHandlers;
 using CarBook.Application.Interfaces;
+using CarBook.Applicationservices;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 // Add services to the container
 builder.Services.AddScoped<CarbookContext>();
 builder.Services.AddScoped<ICarRepository, CarRepository>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(ServiceRegistiration).Assembly));
 
 builder.Services.AddScoped<GetAboutQueryHandler>();
 builder.Services.AddScoped<GetAboutByIdQueryHandler>();
