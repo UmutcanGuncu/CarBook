@@ -74,6 +74,8 @@
     <None Remove="Mediator\Commands\TestimonialCommands\" />
     <None Remove="Mediator\Handlers\TestimonialHandlers\" />
     <None Remove="Dtos\TestimonialDtos\" />
+    <None Remove="Dtos\ServiceDtos\" />
+    <None Remove="Dtos\CarDtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -143,6 +145,8 @@
     <Folder Include="Mediator\Commands\TestimonialCommands\" />
     <Folder Include="Mediator\Handlers\TestimonialHandlers\" />
     <Folder Include="Dtos\TestimonialDtos\" />
+    <Folder Include="Dtos\ServiceDtos\" />
+    <Folder Include="Dtos\CarDtos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />
