@@ -67,6 +67,13 @@
     <None Remove="Mediator\Queries\SocialMediaQueries\" />
     <None Remove="Mediator\Handlers\SocialMediaHandlers\" />
     <None Remove="Mediator\Commands\SocialMediaCommands\" />
+    <None Remove="Dtos\" />
+    <None Remove="Dtos\AboutDtos\" />
+    <None Remove="Mediator\Queries\TestimonialQueries\" />
+    <None Remove="Mediator\Results\TestimonialResults\" />
+    <None Remove="Mediator\Commands\TestimonialCommands\" />
+    <None Remove="Mediator\Handlers\TestimonialHandlers\" />
+    <None Remove="Dtos\TestimonialDtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -129,6 +136,13 @@
     <Folder Include="Mediator\Queries\SocialMediaQueries\" />
     <Folder Include="Mediator\Handlers\SocialMediaHandlers\" />
     <Folder Include="Mediator\Commands\SocialMediaCommands\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Dtos\AboutDtos\" />
+    <Folder Include="Mediator\Queries\TestimonialQueries\" />
+    <Folder Include="Mediator\Results\TestimonialResults\" />
+    <Folder Include="Mediator\Commands\TestimonialCommands\" />
+    <Folder Include="Mediator\Handlers\TestimonialHandlers\" />
+    <Folder Include="Dtos\TestimonialDtos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />

@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "dgSpecHash": "m48TEFH4QlMslYyxQCsptgrjTRzTzerFYBVbxb4UZ6LXfnnS9Vq/263u2iwJonK+OA9A4hN0RWSuyRghasP7sw==",
+  "success": true,
+  "projectFilePath": "/Users/umutcanguncu/Projects/CarBook/Presentation/CarBook.WebUI/CarBook.WebUI.csproj",
+  "expectedPackageFiles": [
+    "/Users/umutcanguncu/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.aspnetcore.mvc.razor.extensions/6.0.0/microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.aspnetcore.mvc.razor.runtimecompilation/8.0.2/microsoft.aspnetcore.mvc.razor.runtimecompilation.8.0.2.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.aspnetcore.razor.language/6.0.0/microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.2/microsoft.codeanalysis.analyzers.3.3.2.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.codeanalysis.common/4.0.0/microsoft.codeanalysis.common.4.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.codeanalysis.csharp/4.0.0/microsoft.codeanalysis.csharp.4.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.codeanalysis.razor/6.0.0/microsoft.codeanalysis.razor.6.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.entityframeworkcore/8.0.1/microsoft.entityframeworkcore.8.0.1.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.1/microsoft.entityframeworkcore.abstractions.8.0.1.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.1/microsoft.entityframeworkcore.analyzers.8.0.1.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.0/microsoft.entityframeworkcore.relational.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.extensions.caching.memory/8.0.0/microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.extensions.dependencymodel/8.0.0/microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/microsoft.netcore.platforms/2.1.2/microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/npgsql/8.0.0/npgsql.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.0/npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/system.reflection.metadata/5.0.0/system.reflection.metadata.5.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/system.text.encoding.codepages/4.5.1/system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
+    "/Users/umutcanguncu/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.2.0 was resolved.",
+      "libraryId": "MediatR",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}
