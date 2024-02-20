@@ -76,6 +76,11 @@
     <None Remove="Dtos\TestimonialDtos\" />
     <None Remove="Dtos\ServiceDtos\" />
     <None Remove="Dtos\CarDtos\" />
+    <None Remove="Dtos\FooterAdressDto\" />
+    <None Remove="Dtos\ContactDtos\" />
+    <None Remove="Mediator\Results\CarResults\" />
+    <None Remove="Mediator\Queries\CarQueries\" />
+    <None Remove="Mediator\Handlers\CarHanders\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -147,6 +152,11 @@
     <Folder Include="Dtos\TestimonialDtos\" />
     <Folder Include="Dtos\ServiceDtos\" />
     <Folder Include="Dtos\CarDtos\" />
+    <Folder Include="Dtos\FooterAdressDto\" />
+    <Folder Include="Dtos\ContactDtos\" />
+    <Folder Include="Mediator\Results\CarResults\" />
+    <Folder Include="Mediator\Queries\CarQueries\" />
+    <Folder Include="Mediator\Handlers\CarHanders\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />

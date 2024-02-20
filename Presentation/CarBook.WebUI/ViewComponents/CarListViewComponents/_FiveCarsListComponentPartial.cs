@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Text.Json;
-using CarBook.Application.Dtos.FooterAdressDto;
+using CarBook.Application.Dtos.CarDtos;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CarBook.WebUI.ViewComponents.UILayoutViewComponents
+namespace CarBook.WebUI.ViewComponents.CarListViewComponents
 {
-	public class _FooterUILayoutViewComponentPartial : ViewComponent
+	public class _FiveCarsListComponentPartial : ViewComponent
 	{
 		private readonly IHttpClientFactory _httpClientFactory;
 
-        public _FooterUILayoutViewComponentPartial(IHttpClientFactory httpClientFactory)
+        public _FiveCarsListComponentPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
@@ -17,12 +17,12 @@ namespace CarBook.WebUI.ViewComponents.UILayoutViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
 		{
 			var client = _httpClientFactory.CreateClient();
-			var responseMessage = await client.GetAsync("https://localhost:7060/api/FooterAdress");
+			var responseMessage = await client.GetAsync("https://localhost:7060/Car/listFiveBrand");
 			if (responseMessage.IsSuccessStatusCode)
 			{
 				var jsonData = await responseMessage.Content.ReadAsStringAsync();
-				var value = JsonSerializer.Deserialize<List<ResultFooterAdressDto>>(jsonData);
-				return View(value);
+				var values = JsonSerializer.Deserialize<List<ResultFiveCarWithBrandsDto>>(jsonData);
+				return View(values);
 			}
 			return View();
 		}

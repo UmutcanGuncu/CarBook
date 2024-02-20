@@ -9,7 +9,6 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
-    <None Remove="Views\UILayout\" />
     <None Remove="ViewComponents\" />
     <None Remove="ViewComponents\UILayoutViewComponents\" />
     <None Remove="Views\Shared\Components\" />
@@ -22,9 +21,16 @@
     <None Remove="ViewComponents\TestimonialViewComponents\" />
     <None Remove="Views\Shared\Components\_TestimonialComponentPartial\" />
     <None Remove="Views\Service\" />
+    <None Remove="Views\Car\" />
+    <None Remove="Views\Contact\" />
+    <None Remove="ViewComponents\ServiceViewComponent\" />
+    <None Remove="Views\Shared\Components\_ServiceComponentPartial\" />
+    <None Remove="ViewComponents\AboutViewComponents\" />
+    <None Remove="Views\Shared\Components\_AboutComponentPartial\" />
+    <None Remove="ViewComponents\CarListViewComponents\" />
+    <None Remove="Views\Shared\Components\_FiveCarsListComponentPartial\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\UILayout\" />
     <Folder Include="ViewComponents\" />
     <Folder Include="ViewComponents\UILayoutViewComponents\" />
     <Folder Include="Views\Shared\Components\" />
@@ -37,6 +43,14 @@
     <Folder Include="ViewComponents\TestimonialViewComponents\" />
     <Folder Include="Views\Shared\Components\_TestimonialComponentPartial\" />
     <Folder Include="Views\Service\" />
+    <Folder Include="Views\Car\" />
+    <Folder Include="Views\Contact\" />
+    <Folder Include="ViewComponents\ServiceViewComponent\" />
+    <Folder Include="Views\Shared\Components\_ServiceComponentPartial\" />
+    <Folder Include="ViewComponents\AboutViewComponents\" />
+    <Folder Include="Views\Shared\Components\_AboutComponentPartial\" />
+    <Folder Include="ViewComponents\CarListViewComponents\" />
+    <Folder Include="Views\Shared\Components\_FiveCarsListComponentPartial\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.2" />
