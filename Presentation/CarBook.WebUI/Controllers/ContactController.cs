@@ -25,6 +25,8 @@ namespace CarBook.WebUI.Controllers
 
         public async Task <IActionResult> Index()
         {
+            ViewBag.ControllerName = "İletişim";
+            ViewBag.PageTitle = "Biizmle İletişimie Geçin";
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("https://localhost:7060/api/FooterAdress");
             if (responseMessage.IsSuccessStatusCode)

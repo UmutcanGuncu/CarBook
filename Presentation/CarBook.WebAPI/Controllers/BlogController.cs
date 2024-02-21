@@ -36,7 +36,7 @@ namespace CarBook.WebAPI.Controllers
             return Ok(value);
         }
         [HttpGet("/api/[controller]/last3BlogList")]
-        public async Task<IActionResult> GetLast3BlogList()
+        public async Task<IActionResult> GetLast3BlogList() //author ve category include edildi
         {
             var values = await _mediator.Send(new GetLast3BlogListWithAuthorAndCategoryQuery());
             return Ok(values);
