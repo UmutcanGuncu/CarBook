@@ -3,6 +3,7 @@ using System;
 using Carbook.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Carbook.Persistence.Migrations
 {
     [DbContext(typeof(CarbookContext))]
-    partial class CarbookContextModelSnapshot : ModelSnapshot
+    [Migration("20240222104332_mig4")]
+    partial class mig4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -173,9 +176,6 @@ namespace Carbook.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid>("PricesId")
-                        .HasColumnType("uuid");
-
                     b.Property<int>("Seat")
                         .HasColumnType("integer");
 
@@ -233,6 +233,30 @@ namespace Carbook.Persistence.Migrations
                     b.HasIndex("FeatureId");
 
                     b.ToTable("CarFeatures");
+                });
+
+            modelBuilder.Entity("CarBook.Domain.Entities.CarPricing", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("numeric");
+
+                    b.Property<Guid>("CarId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("PricingId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("PricingId");
+
+                    b.ToTable("CarPricings");
                 });
 
             modelBuilder.Entity("CarBook.Domain.Entities.Category", b =>
@@ -343,22 +367,11 @@ namespace Carbook.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<int>("AmountDay")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("AmountHour")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("AmountWeek")
-                        .HasColumnType("integer");
-
-                    b.Property<Guid>("CarId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CarId")
-                        .IsUnique();
 
                     b.ToTable("Prices");
                 });
@@ -496,15 +509,23 @@ namespace Carbook.Persistence.Migrations
                     b.Navigation("Feature");
                 });
 
-            modelBuilder.Entity("CarBook.Domain.Entities.Pricing", b =>
+            modelBuilder.Entity("CarBook.Domain.Entities.CarPricing", b =>
                 {
                     b.HasOne("CarBook.Domain.Entities.Car", "Car")
-                        .WithOne("Pricing")
-                        .HasForeignKey("CarBook.Domain.Entities.Pricing", "CarId")
+                        .WithMany("CarPricings")
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CarBook.Domain.Entities.Pricing", "Pricing")
+                        .WithMany("CarPricings")
+                        .HasForeignKey("PricingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Car");
+
+                    b.Navigation("Pricing");
                 });
 
             modelBuilder.Entity("CarBook.Domain.Entities.Author", b =>
@@ -524,8 +545,7 @@ namespace Carbook.Persistence.Migrations
 
                     b.Navigation("CarFeatures");
 
-                    b.Navigation("Pricing")
-                        .IsRequired();
+                    b.Navigation("CarPricings");
                 });
 
             modelBuilder.Entity("CarBook.Domain.Entities.Category", b =>
@@ -536,6 +556,11 @@ namespace Carbook.Persistence.Migrations
             modelBuilder.Entity("CarBook.Domain.Entities.Feature", b =>
                 {
                     b.Navigation("CarFeatures");
+                });
+
+            modelBuilder.Entity("CarBook.Domain.Entities.Pricing", b =>
+                {
+                    b.Navigation("CarPricings");
                 });
 #pragma warning restore 612, 618
         }

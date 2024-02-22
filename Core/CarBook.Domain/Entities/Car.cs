@@ -17,6 +17,8 @@ namespace CarBook.Domain.Entities
 		public string Fuel { get; set; }
         public List<CarFeature> CarFeatures { get; set; }
 		public CarDescription CarDescription { get; set; }
+		public Guid PricesId { get; set; }
+		public Pricing Pricing { get; set; }
     }
 }
 

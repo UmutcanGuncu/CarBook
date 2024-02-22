@@ -19,7 +19,10 @@ namespace CarBook.Application.Mediator.Handlers.PricingHandlers
         {
             await _repository.CreateAsync(new Pricing
             {
-                Name = request.Name
+                AmountDay = request.AmountDay,
+                AmountHour = request.AmountHour,
+                AmountWeek = request.AmountWeek,
+                CarId = request.CarId
             });
         }
     }

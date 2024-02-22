@@ -22,7 +22,9 @@ namespace CarBook.Application.Mediator.Handlers.PricingHandlers
             return new GetPricingByIdQueryResult
             {
                 Id = value.Id,
-                Name = value.Name
+                AmountDay = value.AmountDay,
+                AmountHour = value.AmountHour,
+                AmountWeek = value.AmountHour
             };
         }
     }

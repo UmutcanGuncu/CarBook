@@ -33,6 +33,7 @@
     <None Remove="Views\Shared\Components\_BlogComponentPartial\" />
     <None Remove="ViewComponents\StatisticComponents\" />
     <None Remove="Views\Shared\Components\_StatisticComponentPartial\" />
+    <None Remove="Views\Price\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewComponents\" />
@@ -59,6 +60,7 @@
     <Folder Include="Views\Shared\Components\_BlogComponentPartial\" />
     <Folder Include="ViewComponents\StatisticComponents\" />
     <Folder Include="Views\Shared\Components\_StatisticComponentPartial\" />
+    <Folder Include="Views\Price\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.2" />

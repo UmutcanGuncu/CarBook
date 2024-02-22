@@ -18,8 +18,12 @@ namespace CarBook.Application.Mediator.Handlers.PricingHandlers
         public async Task Handle(UpdatePricingCommand request, CancellationToken cancellationToken)
         {
             var value = await _repository.GetByIdAsync(request.Id);
-            value.Name = request.Name;
+            value.CarId = request.CarId;
+            value.AmountDay = request.AmountDay;
+            value.AmountHour = request.AmountHour;
+            value.AmountWeek = request.AmountWeek;
             await _repository.UpdateAsync(value);
+        
         }
     }
 }

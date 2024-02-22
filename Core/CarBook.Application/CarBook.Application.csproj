@@ -90,6 +90,8 @@
     <None Remove="Mediator\Handlers\BlogHandlers\" />
     <None Remove="Mediator\Commands\BlogCommands\" />
     <None Remove="Dtos\BlogDtos\" />
+    <None Remove="Dtos\CarPricingDtos\" />
+    <None Remove="Dtos\PriceDtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -175,6 +177,8 @@
     <Folder Include="Mediator\Handlers\BlogHandlers\" />
     <Folder Include="Mediator\Commands\BlogCommands\" />
     <Folder Include="Dtos\BlogDtos\" />
+    <Folder Include="Dtos\CarPricingDtos\" />
+    <Folder Include="Dtos\PriceDtos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />
