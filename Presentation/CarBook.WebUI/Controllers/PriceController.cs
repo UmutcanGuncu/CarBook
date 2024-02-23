@@ -21,8 +21,8 @@ namespace CarBook.WebUI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            ViewBag.ControllerName = "Kirala";
-            ViewBag.PageTitle = "Araba Kirala";
+            ViewBag.ControllerName = "Fiyatlar";
+            ViewBag.PageTitle = "Araba Fiyatları";
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("https://localhost:7060/api/Pricing/pricingWithCar");
             if (responseMessage.IsSuccessStatusCode)

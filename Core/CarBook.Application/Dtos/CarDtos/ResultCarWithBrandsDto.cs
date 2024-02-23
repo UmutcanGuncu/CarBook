@@ -13,6 +13,7 @@ namespace CarBook.Application.Dtos.CarDtos
         public string transmission { get; set; }
         public int seat { get; set; }
         public int luggage { get; set; }
+        public int priceAmountDay { get; set; }
         public string fuel { get; set; }
     }
 }
