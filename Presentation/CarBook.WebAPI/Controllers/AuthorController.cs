@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CarBook.Application.Mediator.Commands.AuthorCommands;
 using CarBook.Application.Mediator.Queries.AuthorQueris;
+using CarBook.Application.Mediator.Queries.BlogQueries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,6 +27,12 @@ namespace CarBook.WebAPI.Controllers
         {
             var values = await _mediator.Send(new GetAuthorQuery());
             return Ok(values);
+        }
+        [HttpGet("byBlog/{authorId}/{blogId}")]
+        public async Task<IActionResult> GetAuthorByBlogId(Guid authorId, Guid blogId)
+        {
+            var value = await _mediator.Send(new GetBlogByAuthorIdQuery(authorId, blogId));
+            return Ok(value);
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAuthorByIdList(Guid id)

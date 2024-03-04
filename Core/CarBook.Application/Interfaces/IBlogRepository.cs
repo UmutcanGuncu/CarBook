@@ -8,7 +8,7 @@ namespace CarBook.Application.Interfaces
 		Task<List<Blog>> GetLast3BlogListWithAuthorAndCategory();
 		Task<List<Blog>> GetBlogListWithAuthorAndCategory();
 		Task<Blog> GetBlogListWithAuthorAndCategoryById(Guid id);
-
+		Task<Blog> GetBlogByAuthorId(Guid authorId, Guid blogId);
     }
 }
 

@@ -66,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX0Jsb2dDb21wb25lbnRQYXJ0aWFsL0RlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/umutcanguncu/Projects/CarBook/Presentation/CarBook.WebUI/Views/Shared/Components/_BlogDetailAuthorComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX0Jsb2dEZXRhaWxBdXRob3JDb21wb25lbnRQYXJ0aWFsL0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/umutcanguncu/Projects/CarBook/Presentation/CarBook.WebUI/Views/Shared/Components/_BlogDetailMainComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvX0Jsb2dEZXRhaWxNYWluQ29tcG9uZW50UGFydGlhbC9EZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

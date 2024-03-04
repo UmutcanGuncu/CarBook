@@ -9,6 +9,7 @@ namespace CarBook.Application.Mediator.Results.BlogResults
         public DateTime CreatedDate { get; set; }
         public Guid AuthorId { get; set; }
         public Guid CategoryId { get; set; }
+        public string Description { get; set; }
     }
 }
 

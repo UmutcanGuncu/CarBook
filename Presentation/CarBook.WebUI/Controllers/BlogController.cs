@@ -37,6 +37,7 @@ namespace CarBook.WebUI.Controllers
         {
             ViewBag.ControllerName = "Blog";
             ViewBag.PageTitle = "Blog Detayları";
+            ViewBag.BlogId = id;
             return View();
         }
     }

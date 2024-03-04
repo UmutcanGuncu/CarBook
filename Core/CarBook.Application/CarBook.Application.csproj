@@ -98,6 +98,7 @@
     <None Remove="Mediator\Commands\TagCloudCommands\" />
     <None Remove="Mediator\Handlers\TagCloudHandlers\" />
     <None Remove="Dtos\TagCloudDtos\" />
+    <None Remove="Dtos\AuthorDtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -191,6 +192,7 @@
     <Folder Include="Mediator\Commands\TagCloudCommands\" />
     <Folder Include="Mediator\Handlers\TagCloudHandlers\" />
     <Folder Include="Dtos\TagCloudDtos\" />
+    <Folder Include="Dtos\AuthorDtos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />
