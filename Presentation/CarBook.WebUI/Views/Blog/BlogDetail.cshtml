@@ -1,0 +1,28 @@
+﻿
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+            @await Component.InvokeAsync("_BlogDetailMainComponentPartial")
+            <div class="col-md-4 sidebar ftco-animate">
+                @await Component.InvokeAsync("_BlogDetailSidebarSearchBoxComponentPartial")
+                <div class="sidebar-box ftco-animate">
+                    <div class="categories">
+                        <h3>Kategoriler</h3>
+                        @await Component.InvokeAsync("_BlogDetailsCategoryComponentPartial")
+                    </div>
+                </div>
+                <!--View Component'e al aşağıdaki div'i-->
+                @await Component.InvokeAsync("_RecentBlogComponentPartial");
+
+                @await Component.InvokeAsync("_BlogDetailTagCloudComponentPartial")
+                
+
+                <div class="sidebar-box ftco-animate">
+                    <h3>Paragraph</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section> 

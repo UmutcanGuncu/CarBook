@@ -34,6 +34,16 @@
     <None Remove="ViewComponents\StatisticComponents\" />
     <None Remove="Views\Shared\Components\_StatisticComponentPartial\" />
     <None Remove="Views\Price\" />
+    <None Remove="Views\Blog\" />
+    <None Remove="Views\Shared\Components\_RecentBlogComponentPartial\" />
+    <None Remove="Views\Shared\Components\_BlogDetailSidebarSearchBoxComponentPartial\" />
+    <None Remove="Views\Shared\Components\_BlogDetailsCategoryComponentPartial\" />
+    <None Remove="Views\Shared\Components\_BlogDetailTagCloudComponentPartial\" />
+    <None Remove="Views\Shared\Components\_BlogDetailMainComponentPartial\" />
+    <None Remove="Views\Shared\Components\_BlogDetailTagCloudByBlogComponentPartial\" />
+    <None Remove="ViewComponents\CommentViewComponents\" />
+    <None Remove="Views\Shared\Components\_CommentListByBlogComponentPartial\" />
+    <None Remove="Views\Shared\Components\_AddCommentByBlogComponentPartial\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewComponents\" />
@@ -61,6 +71,16 @@
     <Folder Include="ViewComponents\StatisticComponents\" />
     <Folder Include="Views\Shared\Components\_StatisticComponentPartial\" />
     <Folder Include="Views\Price\" />
+    <Folder Include="Views\Blog\" />
+    <Folder Include="Views\Shared\Components\_RecentBlogComponentPartial\" />
+    <Folder Include="Views\Shared\Components\_BlogDetailSidebarSearchBoxComponentPartial\" />
+    <Folder Include="Views\Shared\Components\_BlogDetailsCategoryComponentPartial\" />
+    <Folder Include="Views\Shared\Components\_BlogDetailTagCloudComponentPartial\" />
+    <Folder Include="Views\Shared\Components\_BlogDetailMainComponentPartial\" />
+    <Folder Include="Views\Shared\Components\_BlogDetailTagCloudByBlogComponentPartial\" />
+    <Folder Include="ViewComponents\CommentViewComponents\" />
+    <Folder Include="Views\Shared\Components\_CommentListByBlogComponentPartial\" />
+    <Folder Include="Views\Shared\Components\_AddCommentByBlogComponentPartial\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.2" />

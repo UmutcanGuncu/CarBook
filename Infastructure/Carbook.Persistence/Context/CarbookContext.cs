@@ -27,6 +27,7 @@ namespace Carbook.Persistence.Context
         public DbSet<Pricing> Prices { get; set; }
         public DbSet<Services> Services { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
+        public DbSet<TagCloud> TagClouds { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
 
 

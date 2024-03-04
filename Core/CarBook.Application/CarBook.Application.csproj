@@ -92,6 +92,11 @@
     <None Remove="Dtos\BlogDtos\" />
     <None Remove="Dtos\CarPricingDtos\" />
     <None Remove="Dtos\PriceDtos\" />
+    <None Remove="Dtos\CategoryDtos\" />
+    <None Remove="Mediator\Results\TagCloudResult\" />
+    <None Remove="Mediator\Queries\TagCloudQueries\" />
+    <None Remove="Mediator\Commands\TagCloudCommands\" />
+    <None Remove="Mediator\Handlers\TagCloudHandlers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -179,6 +184,11 @@
     <Folder Include="Dtos\BlogDtos\" />
     <Folder Include="Dtos\CarPricingDtos\" />
     <Folder Include="Dtos\PriceDtos\" />
+    <Folder Include="Dtos\CategoryDtos\" />
+    <Folder Include="Mediator\Results\TagCloudResult\" />
+    <Folder Include="Mediator\Queries\TagCloudQueries\" />
+    <Folder Include="Mediator\Commands\TagCloudCommands\" />
+    <Folder Include="Mediator\Handlers\TagCloudHandlers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />
