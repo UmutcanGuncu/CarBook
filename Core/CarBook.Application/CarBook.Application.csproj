@@ -99,6 +99,11 @@
     <None Remove="Mediator\Handlers\TagCloudHandlers\" />
     <None Remove="Dtos\TagCloudDtos\" />
     <None Remove="Dtos\AuthorDtos\" />
+    <None Remove="Mediator\Results\CommentResults\" />
+    <None Remove="Mediator\Queries\CommentQueries\" />
+    <None Remove="Mediator\Commands\CommentCommands\" />
+    <None Remove="Mediator\Handlers\CommentHandler\" />
+    <None Remove="Dtos\CommentDtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -193,6 +198,11 @@
     <Folder Include="Mediator\Handlers\TagCloudHandlers\" />
     <Folder Include="Dtos\TagCloudDtos\" />
     <Folder Include="Dtos\AuthorDtos\" />
+    <Folder Include="Mediator\Results\CommentResults\" />
+    <Folder Include="Mediator\Queries\CommentQueries\" />
+    <Folder Include="Mediator\Commands\CommentCommands\" />
+    <Folder Include="Mediator\Handlers\CommentHandler\" />
+    <Folder Include="Dtos\CommentDtos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />

@@ -22,7 +22,7 @@ namespace CarBook.Application.Mediator.Handlers.BlogHandlers
                 AuthorId = request.AuthorId,
                 CategoryId = request.CategoryId,
                 CoverImageUrl = request.CoverImageUrl,
-                CreatedDate = request.CreatedDate,
+                CreatedDate = DateTime.Now,
                 Title = request.Title,
                 Description = request.Description
             });

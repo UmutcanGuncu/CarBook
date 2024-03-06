@@ -21,7 +21,7 @@ namespace CarBook.Application.Mediator.Handlers.BlogHandlers
             value.AuthorId = request.AuthorId;
             value.CategoryId = request.CategoryId;
             value.CoverImageUrl = request.CoverImageUrl;
-            value.CreatedDate = request.CreatedDate;
+            value.CreatedDate = DateTime.Now;
             value.Title = request.Title;
             value.Description = request.Description;
             await _repository.UpdateAsync(value);
