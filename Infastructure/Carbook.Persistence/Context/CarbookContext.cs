@@ -10,8 +10,15 @@ namespace Carbook.Persistence.Context
         {
            
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Comment>()
+                .Property(x => x.ImageUrl)
+                .HasDefaultValue("user.png");
+        }
 
-		public DbSet<About> Abouts { get; set; }
+
+        public DbSet<About> Abouts { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Blog> Blogs { get; set; }
@@ -21,6 +28,7 @@ namespace Carbook.Persistence.Context
         public DbSet<CarFeature> CarFeatures { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
         public DbSet<Feature> Features { get; set; }
         public DbSet<FooterAdress> FooterAdresses { get; set; }
         public DbSet<Location> Locations { get; set; }
