@@ -13,7 +13,13 @@
                         <form method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>Marka</label>
-                                <input class="form-control" asp-for="Model" />
+                                <select asp-for="BrandId" class="form-control"
+                                        asp-items="ViewBag.BrandData"
+                                        id="BrandId"></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Model</label>
+                                <input class="form-control" asp-for="CarModel" />
                             </div>
                             <div class="form-group">
                                 <label>Km</label>
@@ -55,7 +61,7 @@
                                 <label>Büyük Resim</label>
                                 <input class="form-control" asp-for="BigImage" />
                             </div>
-
+                            <button href="/Admin/AdminCar/CreateCar"class="btn btn-outline-success">Araba Ekle</button>
                         </form>
                     </div>
                 </div>
