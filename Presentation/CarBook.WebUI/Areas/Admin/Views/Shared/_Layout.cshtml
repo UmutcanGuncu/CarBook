@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+@await Component.InvokeAsync("_AdminHeadLayoutViewComponent")
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <div class="main-content">
+
+           @await Component.InvokeAsync("_AdminHeaderLayoutViewComponent")
+
+            @await Component.InvokeAsync("_AdminNavbarLayoutViewComponent")
+
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            
+                            @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="text-center text-lg-left">
+                                2019 © Xacton.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-right d-none d-lg-block">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+    <!-- jQuery  -->
+    <script src="~/Admin/horizontal/assets/js/jquery.min.js"></script>
+    <script src="~/Admin/horizontal/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Admin/horizontal/assets/js/waves.js"></script>
+    <script src="~/Admin/horizontal/assets/js/simplebar.min.js"></script>
+
+    <!-- App js -->
+    <script src="~/Admin/horizontal/assets/js/theme.js"></script>
+
+</body>
+
+</html>

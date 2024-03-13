@@ -1,0 +1,59 @@
+﻿@model List<ResultPriceWithCarAndBrandDto>
+@{
+    int count = 1;
+}
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Araba Listesi</h4>
+                <p class="card-subtitle mb-4">
+                    Arabaları Listeleme İşlemini Burada Gerçekleştirebilirsiniz
+                </p>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Marka</th>
+                                <th>Model</th>
+                                <th>Kilometre</th>
+                                <th>Saatlik Fiyat</th>
+                                <th>Günlük Fiyat</th>
+                                <th>Haftalık Fiyat</th>
+                                <th>Koltuk</th>
+                                <th>Bagaj</th>
+                                <th>Yakıt</th>
+                                <th>Güncelle</th>
+                                <th>Sil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@count</th>
+                                    <td>@item.brandName</td>
+                                    <td>@item.model</td>
+                                    <td>@item.km</td>
+                                    <td>₺ @item.amountHour</td>
+                                    <td>₺ @item.amountDay</td>
+                                    <td>₺ @item.amountWeek</td>
+                                    <td>@item.seat</td>
+                                    <td>@item.luggage</td>
+                                    <td>@item.fuel</td>
+                                    <td><a href="/Admin/AdminCar/Update/@item.carId" class="btn btn-outline-warning">Güncelle</a></td>
+                                    <td><a href="/Admin/AdminCar/Delete/@item.carId" class="btn btn-outline-danger">Sil</a></td>
+                                </tr>
+                                    count++;
+
+                                }
+
+
+                        </tbody>
+                    </table>
+                    <a href ="/Admin/AdminCar/CreateCar">Araba Ekle</a>
+                </div>
+
+            </div>
+        
+        </div>
+        
