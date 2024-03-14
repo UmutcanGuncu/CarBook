@@ -1,5 +1,6 @@
 ﻿using System;
 using CarBook.Application.CQRS.Commands.CarCommands;
+using CarBook.Application.CQRS.Results.CarResult;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entities;
 
@@ -13,9 +14,9 @@ namespace CarBook.Application.CQRS.Handlers.CarHandlers
         {
             _repository = repository;
         }
-        public async Task Handle(CreateCarCommand command)
+        public async Task <CreateCarCommandResult> Handle(CreateCarCommand command)
         {
-            await _repository.CreateAsync(new Car
+            Car car = new Car()
             {
                 BrandId = command.BrandId,
                 BigImageUrl = command.BigImageUrl,
@@ -26,7 +27,13 @@ namespace CarBook.Application.CQRS.Handlers.CarHandlers
                 Transmission = command.Transmission,
                 Km = command.Km,
                 CoverImageUrl = command.CoverImageUrl
-            });
+            };
+
+            await _repository.CreateAsync(car);
+            return new CreateCarCommandResult
+            {
+                CarId = car.Id
+            };
         }
     }
 }

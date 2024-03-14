@@ -55,8 +55,8 @@ namespace CarBook.WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddCar(CreateCarCommand command)
         {
-            await _createCarCommandHandler.Handle(command);
-            return Ok("Car Başarıyla Eklendi");
+            var carId = await _createCarCommandHandler.Handle(command);
+            return Ok(carId);
         }
         [HttpPut]
         public async Task<IActionResult> UpdateCar(UpdateCarCommand command)

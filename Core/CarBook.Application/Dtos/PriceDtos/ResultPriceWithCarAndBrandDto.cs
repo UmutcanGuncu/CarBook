@@ -9,8 +9,8 @@ namespace CarBook.Application.Dtos.PriceDtos
         public int amountHour { get; set; }
         public int amountDay { get; set; }
         public int amountWeek { get; set; }
+        public string carName { get; set; }
         public string brandName { get; set; }
-        public string model { get; set; }
         public int km { get; set; }
         public string transmission { get; set; }
         public int seat { get; set; }
