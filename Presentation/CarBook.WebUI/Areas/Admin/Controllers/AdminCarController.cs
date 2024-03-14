@@ -146,6 +146,60 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Update(UpdateCarWithPricesAndBrandViewModel model)
 		{
+				var client = _httpClientFactory.CreateClient();
+			
+                //Resim kaydetme işlemi
+                string coverImageName = model.CoverImageUrl;
+                string bigImageName = model.BigImageUrl;
+                if (model.BigImage != null && model.CoverImage != null)
+                {
+                    string coverImageExtension = Path.GetExtension(model.CoverImage.FileName);
+                    string bigImageExtension = Path.GetExtension(model.BigImage.FileName);
+
+                    coverImageName = Guid.NewGuid() + coverImageExtension;
+                    bigImageName = Guid.NewGuid() + bigImageExtension;
+
+                    string coverImagePath = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/carbook-master/images/{coverImageName}");
+                    string bigImagePath = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/carbook-master/images/{bigImageName}");
+
+                    using var coverImageStream = new FileStream(coverImagePath, FileMode.Create);
+                    using var bigImageStream = new FileStream(bigImagePath, FileMode.Create);
+                    await model.CoverImage.CopyToAsync(coverImageStream);
+                    await model.BigImage.CopyToAsync(bigImageStream);
+                }
+				var carDto = new UpdateCarDto
+				{
+					brandId = model.BrandId,
+					bigImageUrl = model.BigImageUrl,
+					coverImageUrl = model.CoverImageUrl,
+					fuel = model.Fuel,
+					id = model.CarId,
+					km = model.Km,
+					luggage = model.Luggage,
+					model = model.CarModel,
+					seat = model.Seat,
+					transmission = model.Transmission
+				};
+				var jsonDataForCar = JsonSerializer.Serialize(carDto);
+				var stringContentForCar = new StringContent(jsonDataForCar, Encoding.UTF8, "application/json");
+				var responseMessageForCar = await client.PutAsync("https://localhost:7060/api/Car", stringContentForCar);
+				if (responseMessageForCar.IsSuccessStatusCode)
+				{
+					var priceDto = new UpdatePriceDto
+					{
+						id = model.PriceId,
+						amountDay = model.AmountDay,
+						amountHour = model.AmountHour,
+						amountWeek = model.AmountWeek,
+						carId = model.CarId
+
+					}; // diğer tabloların güncelleştirmelerini bu sayfadaki gibi yapma cnm <3
+					var jsonDataForPrice = JsonSerializer.Serialize(priceDto);
+					var stringContentForPrice = new StringContent(jsonDataForPrice, Encoding.UTF8, "application/json");
+					await client.PutAsync("https://localhost:7060/api/Pricing", stringContentForPrice);
+				}
+            
+
 			return Redirect("/Admin/AdminCar/Index");
         }
 	}

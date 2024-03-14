@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarBook.WebUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5a3b309c493606e1c9036ac2ddd89a253ee939f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d32070c4c41e686ffac0d7f89d50790c5933face")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarBook.WebUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarBook.WebUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

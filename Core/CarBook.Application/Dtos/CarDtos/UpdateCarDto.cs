@@ -3,16 +3,16 @@ namespace CarBook.Application.Dtos.CarDtos
 {
 	public class UpdateCarDto
 	{
-        public Guid BrandId { get; set; }
-        public Guid Id { get; set; }
-        public string Model { get; set; }
-        public string CoverImageUrl { get; set; }
-        public string BigImageUrl { get; set; }
-        public int Km { get; set; }
-        public string Transmission { get; set; }
-        public int Seat { get; set; }
-        public int Luggage { get; set; }
-        public string Fuel { get; set; }
+        public Guid brandId { get; set; }
+        public Guid id { get; set; }
+        public string model { get; set; }
+        public string coverImageUrl { get; set; }
+        public string bigImageUrl { get; set; }
+        public int km { get; set; }
+        public string transmission { get; set; }
+        public int seat { get; set; }
+        public int luggage { get; set; }
+        public string fuel { get; set; }
     }
 }
 
