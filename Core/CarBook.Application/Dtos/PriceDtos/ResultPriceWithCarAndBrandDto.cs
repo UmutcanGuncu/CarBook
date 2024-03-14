@@ -16,6 +16,8 @@ namespace CarBook.Application.Dtos.PriceDtos
         public int seat { get; set; }
         public int luggage { get; set; }
         public string fuel { get; set; }
+        public string bigImageUrl { get; set; }
+        public string coverImageUrl { get; set; }
         
     }
 }

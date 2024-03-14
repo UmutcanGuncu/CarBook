@@ -27,6 +27,13 @@ namespace CarBook.WebAPI.Controllers
             var values = await _mediator.Send(new GetPricingQuery());
             return Ok(values);
         }
+        [HttpGet("pricingWithCarAndBrand/{carId}")]
+        public async Task<IActionResult> GetPricingWithCarAndBrandByCarIdList(Guid carId)
+        {
+            var value = await _mediator.Send(new GetPricingWithCarAndBrandByCarIdQuery(carId));
+            return Ok(value);
+        }
+
         [HttpGet("pricingWithCar")]
         public async Task<IActionResult> GetPricingWithCarList()
         {

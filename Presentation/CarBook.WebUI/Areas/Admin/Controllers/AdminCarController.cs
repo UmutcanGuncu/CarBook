@@ -104,6 +104,50 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
 
             return Redirect("/Admin/AdminCar/Index");
 		}
+		[HttpGet]
+		public async Task<IActionResult> Update(Guid id)
+		{
+            var client = _httpClientFactory.CreateClient();
+            var responseMessageForBrand = await client.GetAsync("https://localhost:7060/api/Brand");
+            if (responseMessageForBrand.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessageForBrand.Content.ReadAsStringAsync();
+                var values = JsonSerializer.Deserialize<List<ResultBrandDto>>(jsonData);
+                ViewBag.BrandData = new SelectList(values, "id", "name");
+            }
+			var responseMessageForCar = await client.GetAsync($"https://localhost:7060/api/Pricing/pricingWithCarAndBrand/{id}");
+			if (responseMessageForCar.IsSuccessStatusCode)
+			{
+				var jsonData = await responseMessageForCar.Content.ReadAsStringAsync();
+				var value = JsonSerializer.Deserialize<ResultPriceWithCarAndBrandDto>(jsonData);
+				var model = new UpdateCarWithPricesAndBrandViewModel
+				{
+					PriceId = value.priceId,
+					BrandId = value.brandId,
+					CarId = value.carId,
+					AmountDay = value.amountDay,
+					AmountHour = value.amountHour,
+					AmountWeek = value.amountWeek,
+					BigImageUrl = value.bigImageUrl,
+					CoverImageUrl = value.coverImageUrl,
+					CarModel = value.carName,
+					BrandName = value.brandName,
+					Seat = value.seat,
+					Fuel = value.fuel,
+					Km = value.km,
+					Luggage = value.luggage,
+					Transmission = value.transmission
+					
+				};
+				return View(model);
+            }
+            return View();
+		}
+		[HttpPost]
+		public async Task<IActionResult> Update(UpdateCarWithPricesAndBrandViewModel model)
+		{
+			return Redirect("/Admin/AdminCar/Index");
+        }
 	}
 }
 

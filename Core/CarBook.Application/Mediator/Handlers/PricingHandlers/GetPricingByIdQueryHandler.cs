@@ -24,7 +24,8 @@ namespace CarBook.Application.Mediator.Handlers.PricingHandlers
                 Id = value.Id,
                 AmountDay = value.AmountDay,
                 AmountHour = value.AmountHour,
-                AmountWeek = value.AmountHour
+                AmountWeek = value.AmountHour,
+                CarId = value.CarId
             };
         }
     }
