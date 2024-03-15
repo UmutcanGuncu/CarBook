@@ -105,6 +105,7 @@
     <None Remove="Mediator\Handlers\CommentHandler\" />
     <None Remove="Dtos\CommentDtos\" />
     <None Remove="Dtos\BrandDtos\" />
+    <None Remove="Dtos\FeatureDtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -205,6 +206,7 @@
     <Folder Include="Mediator\Handlers\CommentHandler\" />
     <Folder Include="Dtos\CommentDtos\" />
     <Folder Include="Dtos\BrandDtos\" />
+    <Folder Include="Dtos\FeatureDtos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarBook.Domain\CarBook.Domain.csproj" />

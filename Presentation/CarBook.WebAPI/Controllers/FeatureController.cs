@@ -40,7 +40,7 @@ namespace CarBook.WebAPI.Controllers
             await _mediator.Send(command);
             return Ok("Feature Başarıyla Eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFeature(Guid id)
         {
             await _mediator.Send(new RemoveFeatureCommand(id));

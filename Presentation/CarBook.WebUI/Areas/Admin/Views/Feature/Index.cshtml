@@ -1,0 +1,39 @@
+﻿@{
+    int count = 1;
+}
+@model List<ResultFeatureDto>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Özellik Listesi</h4>
+        <p class="card-subtitle mb-4">
+            Özellikleri Bu Sayfadan Listeleyebilirsiniz
+        </p>
+        <div class="table-responsive">
+            <table class="table mb-0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Özellik İsmi</th>
+                        <th>Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@count</th>
+                            <td>@item.name</td>
+                            <td><a href="/Admin/Feature/Update/@item.id" class="btn btn-outline-warning">Güncelle</a></td>
+                            <td><a href="/Admin/Feature/Delete/@item.id" class="btn btn-outline-danger">Sil</a></td>
+                        </tr>
+                            count++;
+                        }
+                </tbody>
+            </table>
+            <a href="/Admin/Feature/Create">Özellik Ekle</a>
+        </div>
+
+    </div>
+
+</div>
