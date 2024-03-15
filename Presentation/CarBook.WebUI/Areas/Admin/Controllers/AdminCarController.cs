@@ -147,10 +147,20 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
 		public async Task<IActionResult> Update(UpdateCarWithPricesAndBrandViewModel model)
 		{
 				var client = _httpClientFactory.CreateClient();
-			
+				string coverImageName;
+				string bigImageName;
                 //Resim kaydetme işlemi
-                string coverImageName = model.CoverImageUrl;
-                string bigImageName = model.BigImageUrl;
+                if (model.CoverImageUrl == null && model.BigImageUrl == null)
+				{
+					coverImageName = " ";
+					bigImageName = " ";
+				}
+				else
+				{
+					coverImageName = model.CoverImageUrl;
+					bigImageName = model.BigImageUrl;
+				}
+                
                 if (model.BigImage != null && model.CoverImage != null)
                 {
                     string coverImageExtension = Path.GetExtension(model.CoverImage.FileName);
@@ -170,8 +180,8 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
 				var carDto = new UpdateCarDto
 				{
 					brandId = model.BrandId,
-					bigImageUrl = model.BigImageUrl,
-					coverImageUrl = model.CoverImageUrl,
+					bigImageUrl = coverImageName,
+					coverImageUrl = bigImageName,
 					fuel = model.Fuel,
 					id = model.CarId,
 					km = model.Km,
@@ -180,6 +190,7 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
 					seat = model.Seat,
 					transmission = model.Transmission
 				};
+				
 				var jsonDataForCar = JsonSerializer.Serialize(carDto);
 				var stringContentForCar = new StringContent(jsonDataForCar, Encoding.UTF8, "application/json");
 				var responseMessageForCar = await client.PutAsync("https://localhost:7060/api/Car", stringContentForCar);

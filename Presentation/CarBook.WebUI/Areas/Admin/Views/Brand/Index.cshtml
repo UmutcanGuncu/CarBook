@@ -1,0 +1,41 @@
+﻿@model List<ResultBrandDto>
+@{
+    int count = 1;
+}
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Araba Marka Listesi</h4>
+        <p class="card-subtitle mb-4">
+            Kiralık Araçlarımıza Ait Markaları Bu Sayfada Listeleyebilirsiniz
+        </p>
+        <div class="table-responsive">
+            <table class="table mb-0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Marka İsmi</th>
+                        <th>Güncelle</th>
+                        <th>Sil</th>
+                        <th>Markaya Ait Arabaları Listele</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@count</th>
+                            <td>@item.name</td>
+                            <td><a href="/Admin/Brand/Update/@item.id" class="btn btn-outline-warning">Güncelle</a></td>
+                            <td><a href="/Admin/Brand/Delete/@item.id" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Admin/Brand/GetListCarByBrandId" class="btn btn-outline-info">Listele</a></td>
+                        </tr>
+                        count++;
+                    }
+                </tbody>
+            </table>
+            <a href="/Admin/Brand/Create">Marka Ekle</a>
+        </div>
+
+    </div>
+
+</div>

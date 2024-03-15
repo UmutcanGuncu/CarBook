@@ -1,0 +1,26 @@
+﻿@model CreateBrandDto
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Araba Markası Ekle</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <form method="post">
+
+                            <div class="form-group">
+                                <label>Marka İsmi</label>
+                                <input class="form-control" asp-for="name" />
+                            </div>
+                            <button href="/Admin/Feature/Create" class="btn btn-outline-success">Marka Ekle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
