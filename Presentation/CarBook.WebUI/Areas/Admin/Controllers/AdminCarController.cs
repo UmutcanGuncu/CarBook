@@ -202,6 +202,12 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
 
 			return Redirect("/Admin/AdminCar/Index");
         }
-	}
+		public async Task<IActionResult> Delete(Guid id)
+		{
+			var client = _httpClientFactory.CreateClient();
+			await client.DeleteAsync($"https://localhost:7060/api/Car/{id}");
+			return Redirect("/Admin/AdminCar/Index");
+        }
+    }
 }
 
