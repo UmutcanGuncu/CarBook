@@ -21,9 +21,9 @@ namespace Carbook.Persistence.Repositories
             return values;
         }
 
-        public async Task<Pricing> GetPricingWithCarAndBrandByCarId(Guid carId)
+        public async Task<List<Pricing>> GetPricingWithCarAndBrandByBrandId(Guid brandId)
         {
-            var value = await _carbookContext.Prices.Include(x => x.Car).ThenInclude(x => x.Brand).FirstOrDefaultAsync(x=>x.CarId == carId);
+            var value = await _carbookContext.Prices.Include(x => x.Car).ThenInclude(x => x.Brand).Where(x => x.Car.BrandId == brandId).ToListAsync();
             return value;
         }
     }

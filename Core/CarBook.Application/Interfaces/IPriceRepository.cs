@@ -6,7 +6,7 @@ namespace CarBook.Application.Interfaces
 	public interface IPriceRepository
 	{
 		Task<List<Pricing>> GetPricingWithCar();
-		Task<Pricing> GetPricingWithCarAndBrandByCarId(Guid carId);
+		Task<List<Pricing>> GetPricingWithCarAndBrandByBrandId(Guid brandId);
 	}
 }
 

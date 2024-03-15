@@ -1,7 +1,7 @@
 ﻿using System;
 namespace CarBook.Application.Mediator.Results.PricingResults
 {
-	public class GetPricingWithCarAndBrandByCarIdQueryResult
+	public class GetPricingWithCarAndBrandByBrandIdQueryResult
 	{
         public Guid PriceId { get; set; }
         public Guid CarId { get; set; }
