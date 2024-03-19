@@ -1,0 +1,48 @@
+﻿@model List<ResultBannerDto>
+@{
+    int count = 1;
+}
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Ana Sayfa Banner Alanı</h4>
+        <p class="card-subtitle mb-4">
+            
+        </p>
+        <div class="table-responsive">
+            <table class="table mb-0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>Video Açıklaması</th>
+                        <th>Video Url</th>
+                        <th>Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@count</th>
+                            <td>@item.title</td>
+                            <td>@item.description</td>
+                            <td>@item.videoDescription</td>
+                            <td><a href="@item.videoUrl" class="btn btn-outline-secondary">Youtube'da Görüntüle</a></td>
+                            <td><a href="/Admin/Banner/Update/@item.id" class="btn btn-outline-warning">Güncelle</a></td>
+                            <td><a href="/Admin/Banner/Delete/@item.id" class="btn btn-outline-danger">Sil</a></td>
+                        </tr>
+                        count++;
+
+                    }
+
+
+                </tbody>
+            </table>
+            
+        </div>
+
+    </div>
+
+</div>

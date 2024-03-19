@@ -47,6 +47,7 @@
     <None Remove="Views\Shared\Components\_BlogDetailAuthorComponentPartial\" />
     <None Remove="Areas\Admin\Views\Feature\" />
     <None Remove="Areas\Admin\Views\Brand\" />
+    <None Remove="Areas\Admin\Views\Banner\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewComponents\" />
@@ -87,6 +88,7 @@
     <Folder Include="Views\Shared\Components\_BlogDetailAuthorComponentPartial\" />
     <Folder Include="Areas\Admin\Views\Feature\" />
     <Folder Include="Areas\Admin\Views\Brand\" />
+    <Folder Include="Areas\Admin\Views\Banner\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.2" />
